@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Juego Cartitas</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="externo/modal.css">
+        <link rel="stylesheet" href="externo/carta.css">
+        <link rel="shortcut icon" href="recursos/eranInters.jpg" type="image/x-icon">
+    </head>
+
+    <body style="overflow-x: hidden;padding: 15px;">
+        <div style="display: flex; justify-content: center;">
+            <div id="sobres" style="width: 95vw; height:40vh; display:  flex; flex-flow: row wrap;justify-content: center; justify-content: space-evenly;"></div>
+        </div>
+
+        <div id="botones-wrapper" style="display: flex; flex-flow: row;">
+            <button class="btn" id="open_modal">ℹ️</button>
+            <button id="generar" >Jugar</button>
+            <button class="btn-limpiar" id="limpiar" style="text-align: center;width: fit-content;">🗑️</button>
+            <p style="width: fit-content;font-size: x-large;margin-top: 40px;margin-left: 30px;" id="saldo"></p>
+        </div>
+        
+        <div class="modal" id="carta">
+            <div class="fondoModal" id="fondoCarta"></div> 
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="title-modal" id="nombre"></div>
+                    <button class="btn-close-modal" id="close_carta"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="imagen" src="" alt="" style="max-width: 60%;">
+                    <p id="nacionalidad"></p>
+                    <p id="precio"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal" style="overflow-y: hidden;">
+            <div class="fondoModal" id="fondoModal"></div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="title-modal">INFORMACION</div>
+                    <button class="btn-close-modal" id="close_modal"></button>
+                </div>
+                <div class="modal-body" style="font-family: Arial, Helvetica, sans-serif;">
+                    <p>El boton rojo al lado derecho, te permitira borrar las cartas que hayas acumulado hasta el momento, perderas todo el progreso, aunque no el dinero que hayas ganado con estas cartas.</p>
+                    <p>----------------------------------------------------------------- </p>
+                    <p>El boton JUGAR te permite comprar un sobre y probar suerte haber que carta te toca en cada sobre, una vez que salga una carta se guardara en la parte inferior de la pantalla, esto funcionara a modo de inventario de cartas, donde podras revisar la informacion de cada una, venderla o simplemente agrandar tu ego en caso de que te salga una carta rara.</p>
+                    <p>-----------------------------------------------------------------</p>
+                    <p>Por último, eres libre de crear tus propios sobres y cartas, modificando el archivo "sobres.txt" y añadiendo un archivos.csv donde pongas toda la informacion de las cartas que quieras que salgan al comprar un sobre. Recuerda seguir las normas de los sobres con las probabilidades y con los datos, dado que en caso de poner mal los datos el juego simplemente hara cosas raras y no funcionara como es debido.</p>
+                </div>
+                <div><a id="pollo" href="https://www.youtube.com/@polloslokos" target="_blank">🥚</a></div>
+            </div>
+        </div>
+
+        <div class="inventario" style="display: flex; flex-flow: row wrap; width: 99%; height: fit-content;justify-content: center;"></div>
+        <audio id="ms" src="externo/videoplayback.mp3" preload="auto"></audio>
+        <script src="externo/modal.js" defer></script>
+        <script src="index.js"></script>
+    </body>
+</html>

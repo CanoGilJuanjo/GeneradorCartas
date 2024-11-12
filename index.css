@@ -1,0 +1,45 @@
+html{
+    background-color: black;
+    color: white;
+}
+
+#sobres > img{
+    cursor: pointer;
+}
+
+.aumento:hover{
+    border: 2px solid red;
+}
+
+img{
+    border-radius: 20px;
+    border: 1px solid black;
+}
+#botones-wrapper{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-flow: row wrap;
+    margin: 6px;
+    padding: 3px;
+    justify-content: center;
+}
+#generar {
+    font-size: x-large;
+    padding: 20px;
+    border: 1px solid green;
+    border-radius: 20px;
+    margin: 10px;
+    color: white;
+    background-color: green;
+}
+
+#generar:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+    color: black;
+}
+
+.vender{
+    cursor: pointer;
+}
